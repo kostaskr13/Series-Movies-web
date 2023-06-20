@@ -1,0 +1,282 @@
+.search {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+@media (max-width: 768px) {
+  .search {
+    
+    transform: scale(0.8);
+  }
+}
+
+.input__box {
+  width: 200px;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  transition: 0.2s;
+  box-shadow: inset 0 0 5px black;
+}
+@media (max-width: 768px) {
+  .search {
+    top: 20px;
+    transform: scale(0.8);
+  }
+}
+
+.input__box:focus {
+  box-shadow: 0 0 1000px 1000px rgba(0, 0, 0, 0.5);
+  outline: none;
+}
+
+.input_submit {
+  width: 40px;
+  height: 30px;
+  margin-left: 10px;
+  border-radius: 30px;
+  border: none;
+  font-size: 14px;
+  background-color: #2f74c0;
+  color: white;
+  transition: 0.2s all;
+  box-shadow: 0 0 10px black;
+}
+
+.input_submit:hover {
+  background-color: #388ae2;
+}
+
+.input_submit:active {
+  transform: scale(0.8);
+  box-shadow: 0 0 5px black;
+}
+
+
+.input_sort {
+  width: 70px;
+  height: 30px;
+  margin-top: 10px;
+  border-radius: 50px;
+  border: none;
+  font-size: 14px;
+  background-color: #2f74c0;
+  color: white;
+  transition: 0.2s all;
+  box-shadow: 0 0 10px black;
+  position: fixed;
+  top: 4.5%;
+  left: 50%;
+  transform: scale(1);
+  transition: transform 0.5s;
+}
+
+
+
+.input_sort:hover {
+  background-color: #388ae2;
+}
+
+.input_sort:active {
+  transform: scale(0.8);
+  box-shadow: 0 0 5px black;
+}
+
+.input_type {
+  width: 70px;
+  height: 30px;
+  margin-top: 10px;
+  border-radius: 50px;
+  border: none;
+  font-size: 14px;
+  background-color: #2f74c0;
+  color: white;
+  transition: 0.2s all;
+  box-shadow: 0 0 10px black;
+  position: fixed;
+  top: 4.5%;
+  left: 40%; 
+  transform: scale(1);
+  transition: transform 0.5s;
+}
+@media (max-width: 768px) {
+  .input_sort {
+    margin-top: 27px;
+    transform: scale(0.1);
+  }
+}
+@media (max-width: 768px) {
+  .input_type {
+    margin-top: 27px;
+    transform: scale(0.01);
+  }
+}
+.input_type:hover {
+  background-color: #388ae2;
+}
+
+.input_type:active {
+  transform: scale(0.8);
+  box-shadow: 0 0 5px black;
+}
+
+.movies-container {
+  position: absolute;
+  top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 0;
+}
+
+@keyframes movie-appear {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.movie-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 10px;
+  width: 150px;
+  animation: movie-appear 0.5s ease-out;
+  animation-fill-mode: both;
+}
+
+.movie-item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.movie-item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.movie-item:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.movie-item:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.movie-item:nth-child(5) {
+  animation-delay: 1s;
+}
+
+.movie-item:nth-child(6) {
+  animation-delay: 1.2s;
+}
+
+.movie-item:nth-child(7) {
+  animation-delay: 1.4s;
+}
+
+.movie-item:nth-child(8) {
+  animation-delay: 1.6s;
+}
+
+.movie-item:nth-child(9) {
+  animation-delay: 1.8s;
+}
+
+.movie-item:nth-child(10) {
+  animation-delay: 2s;
+}
+
+/* Adjust the animation-delay values and add more nth-child selectors for additional movie items */
+
+.movie-item img {
+  width: 100%;
+  height: 225px;
+  object-fit: cover;
+  border: 2px solid #2f74c0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.movie-item img:hover {
+  transform: scale(1.05);
+  border-color: #388ae2;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.movie-item h3 {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #ffffff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+.movie-item p {
+  font-size: 12px;
+  margin-top: 5px;
+  color: #ffffff;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .search {
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+
+  .input__box {
+    width: 150px;
+    font-size: 12px;
+  }
+
+  .input_submit {
+    width: 30px;
+    height: 25px;
+    margin-left: 5px;
+    font-size: 12px;
+  }
+
+  .input_sort,
+  .input_type {
+    width: 60px;
+    height: 25px;
+    font-size: 12px;
+  }
+
+  .movies-container {
+    top: 80px;
+  }
+
+  .movie-item {
+    width: 120px;
+  }
+
+  .movie-item img {
+    height: 180px;
+  }
+
+  .input_sort {
+    top: 4%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .input_type {
+    top: 4%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+  }
+}

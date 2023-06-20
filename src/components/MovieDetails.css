@@ -1,0 +1,48 @@
+.MovieDetails {
+    display: flex;
+    margin: 150px 10px 20px; /* Update the margin values as needed */
+    color: aliceblue;
+    align-items: flex-start;
+  }
+  
+  .movie-poster img {
+    width: 300px;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  .movie-info {
+    flex: 1;
+  }
+  
+  .movie-info h2 {
+    margin-bottom: 10px;
+  }
+  
+  .movie-info p {
+    margin: 5px 0;
+  }
+  
+  .loading {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .MovieDetails {
+    display: flex;
+    margin: 150px 10px 20px;
+    color: aliceblue;
+    align-items: flex-start;
+    animation: fadeIn 1s ease-in;
+  }
+  
